@@ -252,6 +252,22 @@ section {
     gap: 1rem;
 }
 
+/*JOB ROLES*/
+@keyframes changeText {
+    0% { content: "Data Scientist"; }
+    20% { content: "AI Developer"; }
+    40% { content: "Data Engineer"; }
+    60% { content: "Cloud Architect"; }
+    80% { content: "Project Manager"; }
+    100% { content: "Data Scientist"; } /* Loops back to the start */
+}
+
+.section__text__p2::after {
+    content: "Data Scientist"; /* Default text */
+    animation: changeText 15s infinite; /* Adjusted duration for smooth cycling */
+}
+
+
 /* ABOUT SECTION */
 
 #about {
@@ -517,4 +533,76 @@ footer p {
     .text-container {
         text-align: justify;
     }
+}
+
+.tech-stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(85, 85, 85);
+}
+
+.tech-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Color-coded dots for different technologies */
+.python {
+    background-color: orange;
+}
+
+.react {
+    background-color: blue;
+}
+
+.sql {
+    background-color: green;
+}
+
+.ml {
+    background-color: lightskyblue;
+}
+
+.powerbi {
+    background-color: purple;
+}
+
+.ai {
+    background: red;
+}
+
+/* Ensures the text remains inline with dots */
+.tech-stack p {
+    margin: 0;
+}
+
+/* Default tech-stack is inline */
+.tech-stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(85, 85, 85);
+}
+
+/* Column layout specifically for Project Two */
+.tech-stack-column {
+    flex-direction: column;  /* Stacks items vertically */
+    align-items: center;
+}
+
+.tech-stack-column div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
